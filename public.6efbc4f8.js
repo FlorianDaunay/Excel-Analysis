@@ -729,22 +729,23 @@ var _client = require("react-dom/client");
 var _reactRouterDom = require("react-router-dom");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
+var _styleCss = require("./style.css");
 const el = document.getElementById("root");
 (0, _client.createRoot)(el).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.tsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 9
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.tsx",
-    lineNumber: 8,
+    lineNumber: 9,
     columnNumber: 5
 }, undefined));
 
@@ -753,7 +754,7 @@ const el = document.getElementById("root");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","react-router-dom":"61z4w","./App":"3VLq5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","react-router-dom":"61z4w","./App":"3VLq5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./style.css":"bhJkM"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -32329,6 +32330,10 @@ var _readability = require("../components/views/Readability");
 var _readabilityDefault = parcelHelpers.interopDefault(_readability);
 var _strongAnalysis = require("../components/views/StrongAnalysis");
 var _strongAnalysisDefault = parcelHelpers.interopDefault(_strongAnalysis);
+var _distributions = require("../components/views/Distributions");
+var _distributionsDefault = parcelHelpers.interopDefault(_distributions);
+var _outliers = require("../components/views/Outliers");
+var _outliersDefault = parcelHelpers.interopDefault(_outliers);
 var _sheets = require("../components/views/Sheets");
 var _sheetsDefault = parcelHelpers.interopDefault(_sheets);
 var _s = $RefreshSig$();
@@ -32344,6 +32349,14 @@ const TABS = [
     {
         id: "analysis",
         label: "Analysis & Stats"
+    },
+    {
+        id: "distributions",
+        label: "Distributions"
+    },
+    {
+        id: "outliers",
+        label: "Outliers"
     },
     {
         id: "sheets",
@@ -32362,7 +32375,7 @@ function Home() {
                 onChange: forceUpdate
             }, void 0, false, {
                 fileName: "src/pages/Home.tsx",
-                lineNumber: 29,
+                lineNumber: 34,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -32374,7 +32387,7 @@ function Home() {
                         onChange: setTab
                     }, void 0, false, {
                         fileName: "src/pages/Home.tsx",
-                        lineNumber: 31,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, this),
                     file ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _panelDefault.default), {
@@ -32385,34 +32398,48 @@ function Home() {
                                 file: file
                             }, void 0, false, {
                                 fileName: "src/pages/Home.tsx",
-                                lineNumber: 34,
+                                lineNumber: 39,
                                 columnNumber: 48
                             }, this),
                             tab === "readability" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _readabilityDefault.default), {
                                 file: file
                             }, void 0, false, {
                                 fileName: "src/pages/Home.tsx",
-                                lineNumber: 35,
+                                lineNumber: 40,
                                 columnNumber: 51
                             }, this),
                             tab === "analysis" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _strongAnalysisDefault.default), {
                                 file: file
                             }, void 0, false, {
                                 fileName: "src/pages/Home.tsx",
-                                lineNumber: 36,
+                                lineNumber: 41,
                                 columnNumber: 48
                             }, this),
                             tab === "sheets" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sheetsDefault.default), {
                                 file: file
                             }, void 0, false, {
                                 fileName: "src/pages/Home.tsx",
-                                lineNumber: 37,
+                                lineNumber: 42,
                                 columnNumber: 46
+                            }, this),
+                            tab === "distributions" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _distributionsDefault.default), {
+                                file: file
+                            }, void 0, false, {
+                                fileName: "src/pages/Home.tsx",
+                                lineNumber: 43,
+                                columnNumber: 53
+                            }, this),
+                            tab === "outliers" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _outliersDefault.default), {
+                                file: file
+                            }, void 0, false, {
+                                fileName: "src/pages/Home.tsx",
+                                lineNumber: 44,
+                                columnNumber: 48
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Home.tsx",
-                        lineNumber: 33,
+                        lineNumber: 38,
                         columnNumber: 21
                     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
                         className: "panel",
@@ -32424,7 +32451,7 @@ function Home() {
                                     children: "No file selected"
                                 }, void 0, false, {
                                     fileName: "src/pages/Home.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 49,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -32432,24 +32459,24 @@ function Home() {
                                     children: "Use the + Add File button to open one or more Excel/CSV files."
                                 }, void 0, false, {
                                     fileName: "src/pages/Home.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 50,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/Home.tsx",
-                            lineNumber: 41,
+                            lineNumber: 48,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/Home.tsx",
-                        lineNumber: 40,
+                        lineNumber: 47,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Home.tsx",
-                lineNumber: 30,
+                lineNumber: 35,
                 columnNumber: 13
             }, this)
         ]
@@ -32465,7 +32492,7 @@ $RefreshReg$(_c, "Home");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../components/TopBar":"72ZCV","../components/Tabs":"ev5Ai","../components/Panel":"lhsa0","../logic/state":"3ztxJ","../components/views/Metadata":"jYb0e","../components/views/Readability":"1qyBz","../components/views/StrongAnalysis":"lAmeR","../components/views/Sheets":"i9GoG","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"72ZCV":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../components/TopBar":"72ZCV","../components/Tabs":"ev5Ai","../components/Panel":"lhsa0","../logic/state":"3ztxJ","../components/views/Metadata":"jYb0e","../components/views/Readability":"1qyBz","../components/views/StrongAnalysis":"lAmeR","../components/views/Sheets":"i9GoG","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../components/views/Distributions":"gD2cz","../components/views/Outliers":"3QFAQ"}],"72ZCV":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$47a4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$47a4.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -32622,6 +32649,8 @@ parcelHelpers.export(exports, "mean", ()=>mean);
 parcelHelpers.export(exports, "variance", ()=>variance);
 parcelHelpers.export(exports, "std", ()=>std);
 parcelHelpers.export(exports, "corr", ()=>corr);
+parcelHelpers.export(exports, "fmt", ()=>fmt);
+parcelHelpers.export(exports, "fmtRange", ()=>fmtRange);
 const uid = ()=>Math.random().toString(36).slice(2, 10);
 const fmtBytes = (n)=>{
     if (n < 1024) return `${n} B`;
@@ -32661,6 +32690,10 @@ const corr = (a, b)=>{
     }
     return da === 0 || db === 0 ? NaN : num / Math.sqrt(da * db);
 };
+const fmt = (n)=>Number.isFinite(n) ? new Intl.NumberFormat(undefined, {
+        maximumFractionDigits: 3
+    }).format(n) : "\u2014";
+const fmtRange = (a, b)=>`${fmt(a)} \u{2013} ${fmt(b)}`;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8hOxZ":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -66305,7 +66338,20 @@ parcelHelpers.export(exports, "default", ()=>Metadata);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _collapsible = require("../Collapsible");
+var _collapsibleDefault = parcelHelpers.interopDefault(_collapsible);
+var _s = $RefreshSig$();
 function Metadata({ file }) {
+    _s();
+    // init: first sheet open
+    const [openMap, setOpenMap] = (0, _reactDefault.default).useState(()=>Object.fromEntries(file.sheetOrder.map((s, i)=>[
+                s,
+                i === 0
+            ])));
+    const setAll = (v)=>setOpenMap(Object.fromEntries(file.sheetOrder.map((s)=>[
+                s,
+                v
+            ])));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66316,7 +66362,7 @@ function Metadata({ file }) {
                         v: file.name
                     }, void 0, false, {
                         fileName: "src/components/views/Metadata.tsx",
-                        lineNumber: 8,
+                        lineNumber: 16,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(KV, {
@@ -66324,7 +66370,7 @@ function Metadata({ file }) {
                         v: `${(file.size / 1024).toFixed(1)} KB`
                     }, void 0, false, {
                         fileName: "src/components/views/Metadata.tsx",
-                        lineNumber: 9,
+                        lineNumber: 17,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(KV, {
@@ -66332,7 +66378,7 @@ function Metadata({ file }) {
                         v: new Date(file.lastModified).toLocaleString()
                     }, void 0, false, {
                         fileName: "src/components/views/Metadata.tsx",
-                        lineNumber: 10,
+                        lineNumber: 18,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(KV, {
@@ -66340,27 +66386,56 @@ function Metadata({ file }) {
                         v: String(Object.keys(file.sheets).length)
                     }, void 0, false, {
                         fileName: "src/components/views/Metadata.tsx",
-                        lineNumber: 11,
+                        lineNumber: 19,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/views/Metadata.tsx",
-                lineNumber: 7,
+                lineNumber: 15,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "section",
+                className: "view-controls",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "title",
-                        children: "Per-sheet snapshot"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(true),
+                        children: "Expand all"
                     }, void 0, false, {
                         fileName: "src/components/views/Metadata.tsx",
-                        lineNumber: 15,
+                        lineNumber: 23,
                         columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(false),
+                        children: "Collapse all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Metadata.tsx",
+                        lineNumber: 24,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Metadata.tsx",
+                lineNumber: 22,
+                columnNumber: 13
+            }, this),
+            file.sheetOrder.map((sName)=>{
+                const s = file.sheets[sName];
+                const cells = s.rows.length * s.headers.length || 0;
+                let nonNull = 0;
+                for (const r of s.rows)for(let i = 0; i < s.headers.length; i++)if (r[i] !== null && r[i] !== "") nonNull++;
+                const rate = cells ? (100 * nonNull / cells).toFixed(1) + "%" : "\u2014";
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collapsibleDefault.default), {
+                    title: `Metadata \u{2014} ${s.name}`,
+                    open: !!openMap[sName],
+                    onToggle: ()=>setOpenMap((m)=>({
+                                ...m,
+                                [sName]: !m[sName]
+                            })),
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
                         className: "table",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
@@ -66370,111 +66445,105 @@ function Metadata({ file }) {
                                             children: "Sheet"
                                         }, void 0, false, {
                                             fileName: "src/components/views/Metadata.tsx",
-                                            lineNumber: 18,
-                                            columnNumber: 29
+                                            lineNumber: 43,
+                                            columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             className: "num",
                                             children: "Rows"
                                         }, void 0, false, {
                                             fileName: "src/components/views/Metadata.tsx",
-                                            lineNumber: 18,
-                                            columnNumber: 43
+                                            lineNumber: 43,
+                                            columnNumber: 51
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             className: "num",
                                             children: "Columns"
                                         }, void 0, false, {
                                             fileName: "src/components/views/Metadata.tsx",
-                                            lineNumber: 18,
-                                            columnNumber: 72
+                                            lineNumber: 43,
+                                            columnNumber: 80
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             className: "num",
                                             children: "% Non-null"
                                         }, void 0, false, {
                                             fileName: "src/components/views/Metadata.tsx",
-                                            lineNumber: 18,
-                                            columnNumber: 104
+                                            lineNumber: 43,
+                                            columnNumber: 112
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/views/Metadata.tsx",
-                                    lineNumber: 18,
-                                    columnNumber: 25
+                                    lineNumber: 43,
+                                    columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/components/views/Metadata.tsx",
-                                lineNumber: 17,
-                                columnNumber: 21
+                                lineNumber: 42,
+                                columnNumber: 29
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
-                                children: file.sheetOrder.map((sName)=>{
-                                    const s = file.sheets[sName];
-                                    const cells = s.rows.length * s.headers.length || 0;
-                                    let nonNull = 0;
-                                    for (const r of s.rows)for(let i = 0; i < s.headers.length; i++)if (r[i] !== null && r[i] !== "") nonNull++;
-                                    const rate = cells ? (100 * nonNull / cells).toFixed(1) + "%" : "\u2014";
-                                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: s.name
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/Metadata.tsx",
-                                                lineNumber: 29,
-                                                columnNumber: 37
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: "num",
-                                                children: s.rows.length
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/Metadata.tsx",
-                                                lineNumber: 30,
-                                                columnNumber: 37
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: "num",
-                                                children: s.headers.length
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/Metadata.tsx",
-                                                lineNumber: 31,
-                                                columnNumber: 37
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: "num",
-                                                children: rate
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/Metadata.tsx",
-                                                lineNumber: 32,
-                                                columnNumber: 37
-                                            }, this)
-                                        ]
-                                    }, sName, true, {
-                                        fileName: "src/components/views/Metadata.tsx",
-                                        lineNumber: 28,
-                                        columnNumber: 33
-                                    }, this);
-                                })
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            children: s.name
+                                        }, void 0, false, {
+                                            fileName: "src/components/views/Metadata.tsx",
+                                            lineNumber: 47,
+                                            columnNumber: 37
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            className: "num",
+                                            children: s.rows.length
+                                        }, void 0, false, {
+                                            fileName: "src/components/views/Metadata.tsx",
+                                            lineNumber: 48,
+                                            columnNumber: 37
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            className: "num",
+                                            children: s.headers.length
+                                        }, void 0, false, {
+                                            fileName: "src/components/views/Metadata.tsx",
+                                            lineNumber: 49,
+                                            columnNumber: 37
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            className: "num",
+                                            children: rate
+                                        }, void 0, false, {
+                                            fileName: "src/components/views/Metadata.tsx",
+                                            lineNumber: 50,
+                                            columnNumber: 37
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/views/Metadata.tsx",
+                                    lineNumber: 46,
+                                    columnNumber: 33
+                                }, this)
                             }, void 0, false, {
                                 fileName: "src/components/views/Metadata.tsx",
-                                lineNumber: 20,
-                                columnNumber: 21
+                                lineNumber: 45,
+                                columnNumber: 29
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/views/Metadata.tsx",
-                        lineNumber: 16,
-                        columnNumber: 17
+                        lineNumber: 41,
+                        columnNumber: 25
                     }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/views/Metadata.tsx",
-                lineNumber: 14,
-                columnNumber: 13
-            }, this)
+                }, sName, false, {
+                    fileName: "src/components/views/Metadata.tsx",
+                    lineNumber: 35,
+                    columnNumber: 21
+                }, this);
+            })
         ]
     }, void 0, true);
 }
+_s(Metadata, "74ASnJWAX7VqcKMY1LoeJUhMLH0=");
 _c = Metadata;
 function KV({ k, v }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66485,7 +66554,7 @@ function KV({ k, v }) {
                 children: k
             }, void 0, false, {
                 fileName: "src/components/views/Metadata.tsx",
-                lineNumber: 46,
+                lineNumber: 64,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66493,13 +66562,13 @@ function KV({ k, v }) {
                 children: v
             }, void 0, false, {
                 fileName: "src/components/views/Metadata.tsx",
-                lineNumber: 47,
+                lineNumber: 65,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/views/Metadata.tsx",
-        lineNumber: 45,
+        lineNumber: 63,
         columnNumber: 9
     }, this);
 }
@@ -66509,6 +66578,105 @@ $RefreshReg$(_c, "Metadata");
 $RefreshReg$(_c1, "KV");
 
   $parcel$ReactRefreshHelpers$b97e.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../Collapsible":"1GSqH"}],"1GSqH":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$f443 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$f443.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f443.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Collapsible);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function Collapsible({ title, open, onToggle, children }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `section ${open ? "coll-open" : "coll-closed"}`,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "coll-head",
+                onClick: onToggle,
+                "aria-expanded": open,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Chevron, {
+                        open: open
+                    }, void 0, false, {
+                        fileName: "src/components/Collapsible.tsx",
+                        lineNumber: 17,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "coll-title",
+                        children: title
+                    }, void 0, false, {
+                        fileName: "src/components/Collapsible.tsx",
+                        lineNumber: 18,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Collapsible.tsx",
+                lineNumber: 16,
+                columnNumber: 13
+            }, this),
+            open && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "coll-body vstack",
+                children: children
+            }, void 0, false, {
+                fileName: "src/components/Collapsible.tsx",
+                lineNumber: 20,
+                columnNumber: 22
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Collapsible.tsx",
+        lineNumber: 15,
+        columnNumber: 9
+    }, this);
+}
+_c = Collapsible;
+function Chevron({ open }) {
+    const style = {
+        transition: "transform .18s ease",
+        transform: open ? "rotate(90deg)" : "rotate(0deg)"
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        width: "16",
+        height: "16",
+        viewBox: "0 0 24 24",
+        style: style,
+        "aria-hidden": "true",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            d: "M8 5l8 7-8 7",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "2",
+            strokeLinecap: "round",
+            strokeLinejoin: "round"
+        }, void 0, false, {
+            fileName: "src/components/Collapsible.tsx",
+            lineNumber: 32,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/Collapsible.tsx",
+        lineNumber: 31,
+        columnNumber: 9
+    }, this);
+}
+_c1 = Chevron;
+var _c, _c1;
+$RefreshReg$(_c, "Collapsible");
+$RefreshReg$(_c1, "Chevron");
+
+  $parcel$ReactRefreshHelpers$f443.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
@@ -66528,169 +66696,205 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _analysis = require("../../logic/analysis");
-var _s = $RefreshSig$();
+var _collapsible = require("../Collapsible");
+var _collapsibleDefault = parcelHelpers.interopDefault(_collapsible);
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 function Readability({ file }) {
+    _s();
+    const [openMap, setOpenMap] = (0, _reactDefault.default).useState(()=>Object.fromEntries(file.sheetOrder.map((s, i)=>[
+                s,
+                i === 0
+            ])));
+    const setAll = (v)=>setOpenMap(Object.fromEntries(file.sheetOrder.map((s)=>[
+                s,
+                v
+            ])));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "vstack",
-        children: file.sheetOrder.map((sName)=>{
-            const s = file.sheets[sName];
-            const qual = (0, _analysis.tabularQuality)(s.rows);
-            const miss = (0, _analysis.missingness)(s.headers, s.rows);
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "section vstack",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "view-controls",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "title",
-                        children: [
-                            "Sheet: ",
-                            s.name
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(true),
+                        children: "Expand all"
+                    }, void 0, false, {
                         fileName: "src/components/views/Readability.tsx",
                         lineNumber: 15,
-                        columnNumber: 25
+                        columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hstack",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: `badge ${qual.uniformity > 0.95 ? 'ok' : qual.uniformity > 0.8 ? 'warn' : 'bad'}`,
-                                children: [
-                                    "Uniformity ",
-                                    (100 * qual.uniformity).toFixed(0),
-                                    "%"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/views/Readability.tsx",
-                                lineNumber: 17,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: `badge ${miss.overall < 0.1 ? 'ok' : miss.overall < 0.3 ? 'warn' : 'bad'}`,
-                                children: [
-                                    "Missing ",
-                                    (100 * miss.overall).toFixed(1),
-                                    "%"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/views/Readability.tsx",
-                                lineNumber: 18,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "small",
-                                children: [
-                                    "Avg row length: ",
-                                    qual.avgRowLen.toFixed(1),
-                                    " (\u03C3 ",
-                                    qual.stdevRowLen.toFixed(1),
-                                    ")"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/views/Readability.tsx",
-                                lineNumber: 19,
-                                columnNumber: 29
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(false),
+                        children: "Collapse all"
+                    }, void 0, false, {
                         fileName: "src/components/views/Readability.tsx",
                         lineNumber: 16,
-                        columnNumber: 25
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                        className: "table",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Readability.tsx",
+                lineNumber: 14,
+                columnNumber: 13
+            }, this),
+            file.sheetOrder.map((sName)=>{
+                const s = file.sheets[sName];
+                const qual = (0, _analysis.tabularQuality)(s.rows);
+                const miss = (0, _analysis.missingness)(s.headers, s.rows);
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collapsibleDefault.default), {
+                    title: `Sheet: ${s.name}`,
+                    open: !!openMap[sName],
+                    onToggle: ()=>setOpenMap((m)=>({
+                                ...m,
+                                [sName]: !m[sName]
+                            })),
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "hstack",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: `badge ${qual.uniformity > 0.95 ? 'ok' : qual.uniformity > 0.8 ? 'warn' : 'bad'}`,
                                     children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Column"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/Readability.tsx",
-                                            lineNumber: 23,
-                                            columnNumber: 40
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "% Missing"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/Readability.tsx",
-                                            lineNumber: 23,
-                                            columnNumber: 55
-                                        }, this)
+                                        "Uniformity ",
+                                        (100 * qual.uniformity).toFixed(0),
+                                        "%"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/views/Readability.tsx",
-                                    lineNumber: 23,
-                                    columnNumber: 36
+                                    lineNumber: 32,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: `badge ${miss.overall < 0.1 ? 'ok' : miss.overall < 0.3 ? 'warn' : 'bad'}`,
+                                    children: [
+                                        "Missing ",
+                                        (100 * miss.overall).toFixed(1),
+                                        "%"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/views/Readability.tsx",
+                                    lineNumber: 33,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "small",
+                                    children: [
+                                        "Avg row length: ",
+                                        qual.avgRowLen.toFixed(1),
+                                        " (\u03C3 ",
+                                        qual.stdevRowLen.toFixed(1),
+                                        ")"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/views/Readability.tsx",
+                                    lineNumber: 34,
+                                    columnNumber: 29
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "src/components/views/Readability.tsx",
-                                lineNumber: 23,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
-                                children: miss.byCol.map((c)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/Readability.tsx",
+                            lineNumber: 31,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                            className: "table",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: c.name
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                children: "Column"
                                             }, void 0, false, {
                                                 fileName: "src/components/views/Readability.tsx",
-                                                lineNumber: 26,
-                                                columnNumber: 54
+                                                lineNumber: 38,
+                                                columnNumber: 40
                                             }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                                 className: "num",
-                                                children: [
-                                                    (100 * c.rate).toFixed(1),
-                                                    "%"
-                                                ]
-                                            }, void 0, true, {
+                                                children: "% Missing"
+                                            }, void 0, false, {
                                                 fileName: "src/components/views/Readability.tsx",
-                                                lineNumber: 26,
-                                                columnNumber: 71
+                                                lineNumber: 38,
+                                                columnNumber: 55
                                             }, this)
                                         ]
-                                    }, c.name, true, {
+                                    }, void 0, true, {
                                         fileName: "src/components/views/Readability.tsx",
-                                        lineNumber: 26,
-                                        columnNumber: 37
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "src/components/views/Readability.tsx",
-                                lineNumber: 24,
-                                columnNumber: 29
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/views/Readability.tsx",
-                        lineNumber: 22,
-                        columnNumber: 25
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heatmap, {
-                        headers: s.headers,
-                        rows: s.rows
-                    }, void 0, false, {
-                        fileName: "src/components/views/Readability.tsx",
-                        lineNumber: 31,
-                        columnNumber: 25
-                    }, this)
-                ]
-            }, sName, true, {
-                fileName: "src/components/views/Readability.tsx",
-                lineNumber: 14,
-                columnNumber: 21
-            }, this);
-        })
-    }, void 0, false, {
+                                        lineNumber: 38,
+                                        columnNumber: 36
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/views/Readability.tsx",
+                                    lineNumber: 38,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                    children: miss.byCol.map((c)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    children: c.name
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Readability.tsx",
+                                                    lineNumber: 41,
+                                                    columnNumber: 54
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: [
+                                                        (100 * c.rate).toFixed(1),
+                                                        "%"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/views/Readability.tsx",
+                                                    lineNumber: 41,
+                                                    columnNumber: 71
+                                                }, this)
+                                            ]
+                                        }, c.name, true, {
+                                            fileName: "src/components/views/Readability.tsx",
+                                            lineNumber: 41,
+                                            columnNumber: 37
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "src/components/views/Readability.tsx",
+                                    lineNumber: 39,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/Readability.tsx",
+                            lineNumber: 37,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heatmap, {
+                            headers: s.headers,
+                            rows: s.rows
+                        }, void 0, false, {
+                            fileName: "src/components/views/Readability.tsx",
+                            lineNumber: 46,
+                            columnNumber: 25
+                        }, this)
+                    ]
+                }, sName, true, {
+                    fileName: "src/components/views/Readability.tsx",
+                    lineNumber: 25,
+                    columnNumber: 21
+                }, this);
+            })
+        ]
+    }, void 0, true, {
         fileName: "src/components/views/Readability.tsx",
-        lineNumber: 7,
+        lineNumber: 13,
         columnNumber: 9
     }, this);
 }
+_s(Readability, "74ASnJWAX7VqcKMY1LoeJUhMLH0=");
 _c = Readability;
+// Heatmap stays the same as before
 function Heatmap({ headers, rows }) {
-    _s();
+    _s1();
     const MAX_PREVIEW = 20;
     const MAX_FULL = 1000;
     const [expanded, setExpanded] = (0, _reactDefault.default).useState(false);
@@ -66708,7 +66912,7 @@ function Heatmap({ headers, rows }) {
                 ]
             }, void 0, true, {
                 fileName: "src/components/views/Readability.tsx",
-                lineNumber: 48,
+                lineNumber: 64,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66718,7 +66922,7 @@ function Heatmap({ headers, rows }) {
                 },
                 children: Array.from({
                     length: nRows
-                }).map((_, r)=>headers.map((_, c)=>{
+                }).flatMap((_, r)=>headers.map((_, c)=>{
                         const v = rows[r]?.[c];
                         const cls = v === null || v === "" ? "na" : "ok";
                         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66726,13 +66930,13 @@ function Heatmap({ headers, rows }) {
                             title: `r${r + 1}/c${c + 1}`
                         }, `${r}-${c}`, false, {
                             fileName: "src/components/views/Readability.tsx",
-                            lineNumber: 59,
+                            lineNumber: 72,
                             columnNumber: 32
                         }, this);
                     }))
             }, void 0, false, {
                 fileName: "src/components/views/Readability.tsx",
-                lineNumber: 51,
+                lineNumber: 67,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66743,12 +66947,12 @@ function Heatmap({ headers, rows }) {
                     children: expanded ? `Collapse to ${Math.min(rows.length, MAX_PREVIEW)}` : `Expand to ${Math.min(rows.length, MAX_FULL)}`
                 }, void 0, false, {
                     fileName: "src/components/views/Readability.tsx",
-                    lineNumber: 64,
+                    lineNumber: 77,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/views/Readability.tsx",
-                lineNumber: 63,
+                lineNumber: 76,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66761,7 +66965,7 @@ function Heatmap({ headers, rows }) {
                         }
                     }, void 0, false, {
                         fileName: "src/components/views/Readability.tsx",
-                        lineNumber: 69,
+                        lineNumber: 82,
                         columnNumber: 17
                     }, this),
                     " non-null",
@@ -66773,24 +66977,24 @@ function Heatmap({ headers, rows }) {
                         }
                     }, void 0, false, {
                         fileName: "src/components/views/Readability.tsx",
-                        lineNumber: 70,
+                        lineNumber: 83,
                         columnNumber: 17
                     }, this),
                     " null"
                 ]
             }, void 0, true, {
                 fileName: "src/components/views/Readability.tsx",
-                lineNumber: 68,
+                lineNumber: 81,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/views/Readability.tsx",
-        lineNumber: 47,
+        lineNumber: 63,
         columnNumber: 9
     }, this);
 }
-_s(Heatmap, "DuL5jiiQQFgbn7gBKAyxwS/H4Ek=");
+_s1(Heatmap, "DuL5jiiQQFgbn7gBKAyxwS/H4Ek=");
 _c1 = Heatmap;
 var _c, _c1;
 $RefreshReg$(_c, "Readability");
@@ -66801,7 +67005,7 @@ $RefreshReg$(_c1, "Heatmap");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../logic/analysis":"gMyHq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"gMyHq":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../logic/analysis":"gMyHq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../Collapsible":"1GSqH"}],"gMyHq":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "profileColumns", ()=>profileColumns);
@@ -66809,6 +67013,14 @@ parcelHelpers.export(exports, "correlationMatrix", ()=>correlationMatrix);
 parcelHelpers.export(exports, "tabularQuality", ()=>tabularQuality);
 parcelHelpers.export(exports, "duplicatesAndKeys", ()=>duplicatesAndKeys);
 parcelHelpers.export(exports, "missingness", ()=>missingness);
+// === DISTRIBUTIONS ===
+parcelHelpers.export(exports, "histogram", ()=>histogram);
+parcelHelpers.export(exports, "topCategories", ()=>topCategories);
+parcelHelpers.export(exports, "stringStats", ()=>stringStats);
+// === OUTLIERS ===
+parcelHelpers.export(exports, "iqrFence", ()=>iqrFence);
+parcelHelpers.export(exports, "zscoreOutliers", ()=>zscoreOutliers);
+parcelHelpers.export(exports, "detectOutliersByColumn", ()=>detectOutliersByColumn);
 var _utils = require("./utils");
 function profileColumns(headers, rows) {
     const cols = headers.map((_, i)=>rows.map((r)=>r[i]));
@@ -66930,6 +67142,133 @@ function missingness(headers, rows) {
         overall
     };
 }
+function histogram(values, binCount = 20) {
+    const arr = values.filter((v)=>Number.isFinite(v));
+    if (!arr.length) return {
+        bins: [],
+        counts: [],
+        min: NaN,
+        max: NaN
+    };
+    const min = Math.min(...arr), max = Math.max(...arr);
+    const width = max - min || 1;
+    const bins = Array.from({
+        length: binCount
+    }, (_, i)=>min + i * width / binCount);
+    const counts = Array(binCount).fill(0);
+    for (const v of arr){
+        let idx = Math.floor((v - min) / width * binCount);
+        if (idx === binCount) idx = binCount - 1; // edge case at max
+        counts[idx]++;
+    }
+    return {
+        bins,
+        counts,
+        min,
+        max
+    };
+}
+function topCategories(values, topN = 10) {
+    const freq = new Map();
+    let nonNull = 0;
+    for (const v of values){
+        if (v === null || v === "") continue;
+        nonNull++;
+        const key = String(v);
+        freq.set(key, (freq.get(key) || 0) + 1);
+    }
+    const sorted = Array.from(freq.entries()).sort((a, b)=>b[1] - a[1]);
+    const items = sorted.slice(0, topN).map(([k, c])=>({
+            value: k,
+            count: c,
+            pct: nonNull ? c / nonNull : 0
+        }));
+    return {
+        items,
+        nonNullCount: nonNull,
+        uniqueCount: freq.size
+    };
+}
+function stringStats(values) {
+    const s = values.filter((v)=>v !== null && v !== "").map((v)=>String(v));
+    const lens = s.map((x)=>x.length);
+    const hasDigits = s.filter((x)=>/\d/.test(x)).length;
+    const hasAlpha = s.filter((x)=>/[A-Za-z]/.test(x)).length;
+    const hasSpecial = s.filter((x)=>/[^A-Za-z0-9\s]/.test(x)).length;
+    return {
+        count: s.length,
+        minLen: lens.length ? Math.min(...lens) : 0,
+        maxLen: lens.length ? Math.max(...lens) : 0,
+        meanLen: lens.length ? lens.reduce((a, b)=>a + b, 0) / lens.length : 0,
+        pctDigits: s.length ? hasDigits / s.length : 0,
+        pctAlpha: s.length ? hasAlpha / s.length : 0,
+        pctSpecial: s.length ? hasSpecial / s.length : 0
+    };
+}
+function iqrFence(values) {
+    const v = values.filter((x)=>Number.isFinite(x)).sort((a, b)=>a - b);
+    if (!v.length) return {
+        q1: NaN,
+        q3: NaN,
+        iqr: NaN,
+        low: NaN,
+        high: NaN
+    };
+    const q1 = (0, _utils.percentile)(v, 0.25), q3 = (0, _utils.percentile)(v, 0.75);
+    const iqr = q3 - q1;
+    const low = q1 - 1.5 * iqr;
+    const high = q3 + 1.5 * iqr;
+    return {
+        q1,
+        q3,
+        iqr,
+        low,
+        high
+    };
+}
+function zscoreOutliers(values, z = 3) {
+    const v = values.filter((x)=>Number.isFinite(x));
+    const m = (0, _utils.mean)(v), s = (0, _utils.std)(v);
+    if (!v.length || !Number.isFinite(s) || s === 0) return {
+        count: 0,
+        idx: []
+    };
+    const idx = [];
+    for(let i = 0; i < v.length; i++){
+        const zc = Math.abs((v[i] - m) / s);
+        if (zc > z) idx.push(i);
+    }
+    return {
+        count: idx.length,
+        idx
+    };
+}
+function detectOutliersByColumn(headers, rows) {
+    // For each numeric column: IQR and Z-score counts
+    return headers.map((h, i)=>{
+        const colNums = rows.map((r)=>r[i]).map((x)=>typeof x === 'number' ? x : typeof x === 'string' && x.trim() !== '' && !isNaN(+x) ? +x : NaN);
+        const numbers = colNums.filter((x)=>Number.isFinite(x));
+        if (numbers.length < 5) return {
+            name: h,
+            numeric: false,
+            countIQR: 0,
+            countZ: 0,
+            low: NaN,
+            high: NaN
+        };
+        const fence = iqrFence(numbers);
+        const countIQR = numbers.filter((v)=>v < fence.low || v > fence.high).length;
+        const zres = zscoreOutliers(numbers, 3);
+        return {
+            name: h,
+            numeric: true,
+            countIQR,
+            countZ: zres.count,
+            low: fence.low,
+            high: fence.high
+        };
+    });
+}
 
 },{"./utils":"191Vn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lAmeR":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1287 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -66946,290 +67285,326 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _analysis = require("../../logic/analysis");
+var _collapsible = require("../Collapsible");
+var _collapsibleDefault = parcelHelpers.interopDefault(_collapsible);
+var _s = $RefreshSig$();
 function StrongAnalysis({ file }) {
+    _s();
+    const [openMap, setOpenMap] = (0, _reactDefault.default).useState(()=>Object.fromEntries(file.sheetOrder.map((s, i)=>[
+                s,
+                i === 0
+            ])));
+    const setAll = (v)=>setOpenMap(Object.fromEntries(file.sheetOrder.map((s)=>[
+                s,
+                v
+            ])));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: file.sheetOrder.map((sName)=>{
-            const s = file.sheets[sName];
-            const prof = (0, _analysis.profileColumns)(s.headers, s.rows);
-            const miss = (0, _analysis.missingness)(s.headers, s.rows);
-            const corr = (0, _analysis.correlationMatrix)(s.headers, s.rows);
-            const dup = (0, _analysis.duplicatesAndKeys)(s.headers, s.rows);
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "section vstack",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "view-controls",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "title",
-                        children: [
-                            "Deep Analysis \u2014 ",
-                            s.name
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(true),
+                        children: "Expand all"
+                    }, void 0, false, {
                         fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 17,
-                        columnNumber: 25
+                        lineNumber: 15,
+                        columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                        className: "table",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(false),
+                        children: "Collapse all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/StrongAnalysis.tsx",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/StrongAnalysis.tsx",
+                lineNumber: 14,
+                columnNumber: 13
+            }, this),
+            file.sheetOrder.map((sName)=>{
+                const s = file.sheets[sName];
+                const prof = (0, _analysis.profileColumns)(s.headers, s.rows);
+                const miss = (0, _analysis.missingness)(s.headers, s.rows);
+                const corr = (0, _analysis.correlationMatrix)(s.headers, s.rows);
+                const dup = (0, _analysis.duplicatesAndKeys)(s.headers, s.rows);
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collapsibleDefault.default), {
+                    title: `Deep Analysis \u{2014} ${s.name}`,
+                    open: !!openMap[sName],
+                    onToggle: ()=>setOpenMap((m)=>({
+                                ...m,
+                                [sName]: !m[sName]
+                            })),
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                            className: "table",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                children: "Column"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 36,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                children: "Type"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 36,
+                                                columnNumber: 52
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Non-null"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 36,
+                                                columnNumber: 65
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "% Empty"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 36,
+                                                columnNumber: 98
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Uniques"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 37,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Mean"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 37,
+                                                columnNumber: 69
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Std"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 37,
+                                                columnNumber: 98
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Min"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 38,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "P25"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 38,
+                                                columnNumber: 65
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Median"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 38,
+                                                columnNumber: 93
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "P75"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 39,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Max"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/StrongAnalysis.tsx",
+                                                lineNumber: 39,
+                                                columnNumber: 65
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/StrongAnalysis.tsx",
+                                        lineNumber: 35,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                    lineNumber: 34,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                    children: prof.map((r)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    children: r.name
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                                    lineNumber: 45,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "badge",
+                                                        children: r.kind
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/StrongAnalysis.tsx",
+                                                        lineNumber: 46,
+                                                        columnNumber: 45
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                                    lineNumber: 46,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: r.nonNull
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                                    lineNumber: 47,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: [
+                                                        (100 * r.emptyRate).toFixed(1),
+                                                        "%"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                                    lineNumber: 48,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: r.uniques
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                                    lineNumber: 49,
+                                                    columnNumber: 41
+                                                }, this),
+                                                numTD(r.stats.mean),
+                                                numTD(r.stats.std),
+                                                numTD(r.stats.min),
+                                                numTD(r.stats.p25),
+                                                numTD(r.stats.p50),
+                                                numTD(r.stats.p75),
+                                                numTD(r.stats.max)
+                                            ]
+                                        }, r.name, true, {
+                                            fileName: "src/components/views/StrongAnalysis.tsx",
+                                            lineNumber: 44,
+                                            columnNumber: 37
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                    lineNumber: 42,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/StrongAnalysis.tsx",
+                            lineNumber: 33,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "small",
+                            children: [
+                                "Overall missing: ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: `badge ${miss.overall < 0.1 ? 'ok' : miss.overall < 0.3 ? 'warn' : 'bad'}`,
                                     children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Column"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 22,
-                                            columnNumber: 37
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Type"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 22,
-                                            columnNumber: 52
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Non-null"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 22,
-                                            columnNumber: 65
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "% Empty"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 22,
-                                            columnNumber: 98
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Uniques"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 23,
-                                            columnNumber: 37
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Mean"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 23,
-                                            columnNumber: 69
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Std"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 23,
-                                            columnNumber: 98
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Min"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 24,
-                                            columnNumber: 37
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "P25"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 24,
-                                            columnNumber: 65
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Median"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 24,
-                                            columnNumber: 93
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "P75"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 25,
-                                            columnNumber: 37
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            className: "num",
-                                            children: "Max"
-                                        }, void 0, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 25,
-                                            columnNumber: 65
-                                        }, this)
+                                        (100 * miss.overall).toFixed(1),
+                                        "%"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/views/StrongAnalysis.tsx",
-                                    lineNumber: 21,
-                                    columnNumber: 33
+                                    lineNumber: 63,
+                                    columnNumber: 46
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                lineNumber: 20,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
-                                children: prof.map((r)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: r.name
-                                            }, void 0, false, {
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/StrongAnalysis.tsx",
+                            lineNumber: 62,
+                            columnNumber: 25
+                        }, this),
+                        corr.names.length >= 2 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CorrTable, {
+                            names: corr.names,
+                            matrix: corr.matrix
+                        }, void 0, false, {
+                            fileName: "src/components/views/StrongAnalysis.tsx",
+                            lineNumber: 66,
+                            columnNumber: 52
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "hstack",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: `badge ${dup.dupRowCount === 0 ? 'ok' : 'bad'}`,
+                                    children: [
+                                        "Duplicate rows: ",
+                                        dup.dupRowCount
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                    lineNumber: 69,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "small",
+                                    children: [
+                                        "Candidate keys: ",
+                                        dup.candidates.length ? dup.candidates.map((c)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
+                                                className: "inline",
+                                                children: c.name
+                                            }, c.name, false, {
                                                 fileName: "src/components/views/StrongAnalysis.tsx",
-                                                lineNumber: 31,
-                                                columnNumber: 41
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                    className: "badge",
-                                                    children: r.kind
-                                                }, void 0, false, {
-                                                    fileName: "src/components/views/StrongAnalysis.tsx",
-                                                    lineNumber: 32,
-                                                    columnNumber: 45
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                                lineNumber: 32,
-                                                columnNumber: 41
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: "num",
-                                                children: r.nonNull
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                                lineNumber: 33,
-                                                columnNumber: 41
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: "num",
-                                                children: [
-                                                    (100 * r.emptyRate).toFixed(1),
-                                                    "%"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                                lineNumber: 34,
-                                                columnNumber: 41
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: "num",
-                                                children: r.uniques
-                                            }, void 0, false, {
-                                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                                lineNumber: 35,
-                                                columnNumber: 41
-                                            }, this),
-                                            numTD(r.stats.mean),
-                                            numTD(r.stats.std),
-                                            numTD(r.stats.min),
-                                            numTD(r.stats.p25),
-                                            numTD(r.stats.p50),
-                                            numTD(r.stats.p75),
-                                            numTD(r.stats.max)
-                                        ]
-                                    }, r.name, true, {
-                                        fileName: "src/components/views/StrongAnalysis.tsx",
-                                        lineNumber: 30,
-                                        columnNumber: 37
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                lineNumber: 28,
-                                columnNumber: 29
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 19,
-                        columnNumber: 25
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "small",
-                        children: [
-                            "Overall missing: ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: `badge ${miss.overall < 0.1 ? 'ok' : miss.overall < 0.3 ? 'warn' : 'bad'}`,
-                                children: [
-                                    (100 * miss.overall).toFixed(1),
-                                    "%"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                lineNumber: 49,
-                                columnNumber: 46
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 48,
-                        columnNumber: 25
-                    }, this),
-                    corr.names.length >= 2 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CorrTable, {
-                        names: corr.names,
-                        matrix: corr.matrix
-                    }, void 0, false, {
-                        fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 52,
-                        columnNumber: 52
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hstack",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: `badge ${dup.dupRowCount === 0 ? 'ok' : 'bad'}`,
-                                children: [
-                                    "Duplicate rows: ",
-                                    dup.dupRowCount
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                lineNumber: 55,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "small",
-                                children: [
-                                    "Candidate keys: ",
-                                    dup.candidates.length ? dup.candidates.map((c)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
-                                            className: "inline",
-                                            children: c.name
-                                        }, c.name, false, {
-                                            fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 57,
-                                            columnNumber: 33
-                                        }, this)) : "None"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/views/StrongAnalysis.tsx",
-                                lineNumber: 56,
-                                columnNumber: 29
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 54,
-                        columnNumber: 25
-                    }, this)
-                ]
-            }, sName, true, {
-                fileName: "src/components/views/StrongAnalysis.tsx",
-                lineNumber: 16,
-                columnNumber: 21
-            }, this);
-        })
-    }, void 0, false);
+                                                lineNumber: 71,
+                                                columnNumber: 33
+                                            }, this)) : "None"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/views/StrongAnalysis.tsx",
+                                    lineNumber: 70,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/StrongAnalysis.tsx",
+                            lineNumber: 68,
+                            columnNumber: 25
+                        }, this)
+                    ]
+                }, sName, true, {
+                    fileName: "src/components/views/StrongAnalysis.tsx",
+                    lineNumber: 27,
+                    columnNumber: 21
+                }, this);
+            })
+        ]
+    }, void 0, true);
 }
+_s(StrongAnalysis, "74ASnJWAX7VqcKMY1LoeJUhMLH0=");
 _c = StrongAnalysis;
 function numTD(v) {
     const txt = typeof v === "number" && !isNaN(v) ? v.toFixed(3) : "\u2014";
@@ -67238,7 +67613,7 @@ function numTD(v) {
         children: txt
     }, void 0, false, {
         fileName: "src/components/views/StrongAnalysis.tsx",
-        lineNumber: 69,
+        lineNumber: 83,
         columnNumber: 12
     }, this);
 }
@@ -67251,7 +67626,7 @@ function CorrTable({ names, matrix }) {
                 children: "Correlation matrix (numeric columns)"
             }, void 0, false, {
                 fileName: "src/components/views/StrongAnalysis.tsx",
-                lineNumber: 75,
+                lineNumber: 89,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
@@ -67262,25 +67637,25 @@ function CorrTable({ names, matrix }) {
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {}, void 0, false, {
                                     fileName: "src/components/views/StrongAnalysis.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 92,
                                     columnNumber: 25
                                 }, this),
                                 names.map((n)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                         children: n
                                     }, n, false, {
                                         fileName: "src/components/views/StrongAnalysis.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 92,
                                         columnNumber: 50
                                     }, this))
                             ]
                         }, void 0, true, {
                             fileName: "src/components/views/StrongAnalysis.tsx",
-                            lineNumber: 78,
+                            lineNumber: 92,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 77,
+                        lineNumber: 91,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -67290,7 +67665,7 @@ function CorrTable({ names, matrix }) {
                                         children: rowName
                                     }, void 0, false, {
                                         fileName: "src/components/views/StrongAnalysis.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 97,
                                         columnNumber: 29
                                     }, this),
                                     names.map((_, j)=>{
@@ -67306,31 +67681,31 @@ function CorrTable({ names, matrix }) {
                                             children: isNaN(v) ? "\u2014" : v.toFixed(3)
                                         }, j, false, {
                                             fileName: "src/components/views/StrongAnalysis.tsx",
-                                            lineNumber: 91,
+                                            lineNumber: 105,
                                             columnNumber: 40
                                         }, this);
                                     })
                                 ]
                             }, rowName, true, {
                                 fileName: "src/components/views/StrongAnalysis.tsx",
-                                lineNumber: 82,
+                                lineNumber: 96,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "src/components/views/StrongAnalysis.tsx",
-                        lineNumber: 80,
+                        lineNumber: 94,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/views/StrongAnalysis.tsx",
-                lineNumber: 76,
+                lineNumber: 90,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/views/StrongAnalysis.tsx",
-        lineNumber: 74,
+        lineNumber: 88,
         columnNumber: 9
     }, this);
 }
@@ -67344,7 +67719,7 @@ $RefreshReg$(_c1, "CorrTable");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../logic/analysis":"gMyHq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"i9GoG":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../logic/analysis":"gMyHq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../Collapsible":"1GSqH"}],"i9GoG":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$3617 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$3617.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -67358,25 +67733,58 @@ parcelHelpers.export(exports, "default", ()=>Sheets);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _collapsible = require("../Collapsible");
+var _collapsibleDefault = parcelHelpers.interopDefault(_collapsible);
+var _s = $RefreshSig$();
 function Sheets({ file }) {
+    _s();
+    const [openMap, setOpenMap] = (0, _reactDefault.default).useState(()=>Object.fromEntries(file.sheetOrder.map((s, i)=>[
+                s,
+                i === 0
+            ])));
+    const setAll = (v)=>setOpenMap(Object.fromEntries(file.sheetOrder.map((s)=>[
+                s,
+                v
+            ])));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: file.sheetOrder.map((sName)=>{
-            const s = file.sheets[sName];
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "section vstack",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "view-controls",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "title",
-                        children: [
-                            "Sheet: ",
-                            s.name
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(true),
+                        children: "Expand all"
+                    }, void 0, false, {
                         fileName: "src/components/views/Sheets.tsx",
-                        lineNumber: 11,
-                        columnNumber: 25
+                        lineNumber: 14,
+                        columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(false),
+                        children: "Collapse all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Sheets.tsx",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Sheets.tsx",
+                lineNumber: 13,
+                columnNumber: 13
+            }, this),
+            file.sheetOrder.map((sName)=>{
+                const s = file.sheets[sName];
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collapsibleDefault.default), {
+                    title: `Sheet: ${s.name}`,
+                    open: !!openMap[sName],
+                    onToggle: ()=>setOpenMap((m)=>({
+                                ...m,
+                                [sName]: !m[sName]
+                            })),
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
                         className: "table",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
@@ -67385,17 +67793,17 @@ function Sheets({ file }) {
                                             children: h
                                         }, h, false, {
                                             fileName: "src/components/views/Sheets.tsx",
-                                            lineNumber: 14,
-                                            columnNumber: 57
+                                            lineNumber: 28,
+                                            columnNumber: 60
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "src/components/views/Sheets.tsx",
-                                    lineNumber: 14,
-                                    columnNumber: 33
+                                    lineNumber: 28,
+                                    columnNumber: 36
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/components/views/Sheets.tsx",
-                                lineNumber: 13,
+                                lineNumber: 28,
                                 columnNumber: 29
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -67407,35 +67815,36 @@ function Sheets({ file }) {
                                                 children: txt
                                             }, ci, false, {
                                                 fileName: "src/components/views/Sheets.tsx",
-                                                lineNumber: 22,
+                                                lineNumber: 35,
                                                 columnNumber: 52
                                             }, this);
                                         })
                                     }, ri, false, {
                                         fileName: "src/components/views/Sheets.tsx",
-                                        lineNumber: 18,
+                                        lineNumber: 31,
                                         columnNumber: 37
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/components/views/Sheets.tsx",
-                                lineNumber: 16,
+                                lineNumber: 29,
                                 columnNumber: 29
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/views/Sheets.tsx",
-                        lineNumber: 12,
+                        lineNumber: 27,
                         columnNumber: 25
                     }, this)
-                ]
-            }, sName, true, {
-                fileName: "src/components/views/Sheets.tsx",
-                lineNumber: 10,
-                columnNumber: 21
-            }, this);
-        })
-    }, void 0, false);
+                }, sName, false, {
+                    fileName: "src/components/views/Sheets.tsx",
+                    lineNumber: 21,
+                    columnNumber: 21
+                }, this);
+            })
+        ]
+    }, void 0, true);
 }
+_s(Sheets, "74ASnJWAX7VqcKMY1LoeJUhMLH0=");
 _c = Sheets;
 var _c;
 $RefreshReg$(_c, "Sheets");
@@ -67445,6 +67854,1185 @@ $RefreshReg$(_c, "Sheets");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire47ed", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../Collapsible":"1GSqH"}],"gD2cz":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2706 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2706.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2706.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Distributions);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _analysis = require("../../logic/analysis");
+var _utils = require("../../logic/utils");
+var _collapsible = require("../Collapsible");
+var _collapsibleDefault = parcelHelpers.interopDefault(_collapsible);
+var _infoChip = require("../InfoChip");
+var _infoChipDefault = parcelHelpers.interopDefault(_infoChip);
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
+function Distributions({ file }) {
+    _s();
+    const [openMap, setOpenMap] = (0, _reactDefault.default).useState(()=>Object.fromEntries(file.sheetOrder.map((s, i)=>[
+                s,
+                i === 0
+            ])));
+    const setAll = (v)=>setOpenMap(Object.fromEntries(file.sheetOrder.map((s)=>[
+                s,
+                v
+            ])));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "vstack",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "view-controls",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(true),
+                        children: "Expand all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 19,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(false),
+                        children: "Collapse all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 20,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 18,
+                columnNumber: 13
+            }, this),
+            file.sheetOrder.map((sName)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SheetDistributions, {
+                    sheet: file.sheets[sName],
+                    open: !!openMap[sName],
+                    onToggle: ()=>setOpenMap((m)=>({
+                                ...m,
+                                [sName]: !m[sName]
+                            }))
+                }, sName, false, {
+                    fileName: "src/components/views/Distributions.tsx",
+                    lineNumber: 24,
+                    columnNumber: 17
+                }, this))
+        ]
+    }, void 0, true, {
+        fileName: "src/components/views/Distributions.tsx",
+        lineNumber: 17,
+        columnNumber: 9
+    }, this);
+}
+_s(Distributions, "74ASnJWAX7VqcKMY1LoeJUhMLH0=");
+_c = Distributions;
+function SheetDistributions({ sheet, open, onToggle }) {
+    _s1();
+    var _s = $RefreshSig$();
+    const miss = (0, _analysis.missingness)(sheet.headers, sheet.rows);
+    const [bins, setBins] = (0, _reactDefault.default).useState(20); // sheet-level bin count
+    const [expandedCats, setExpandedCats] = (0, _reactDefault.default).useState({});
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collapsibleDefault.default), {
+        title: `Distributions \u{2014} ${sheet.name}`,
+        open: open,
+        onToggle: onToggle,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "hstack",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "small",
+                        children: [
+                            "Overall missing: ",
+                            (100 * miss.overall).toFixed(1),
+                            "%"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 55,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "small",
+                        children: "\xb7"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 56,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        className: "small",
+                        children: [
+                            "Bins:",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                className: "btn small",
+                                value: bins,
+                                onChange: (e)=>setBins(parseInt(e.target.value, 10)),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: 10,
+                                        children: "10"
+                                    }, void 0, false, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 64,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: 20,
+                                        children: "20"
+                                    }, void 0, false, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 65,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: 40,
+                                        children: "40"
+                                    }, void 0, false, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 66,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/views/Distributions.tsx",
+                                lineNumber: 59,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 57,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 54,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "section vstack",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "title",
+                        children: "Numeric columns"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 73,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "grid cols-3",
+                        children: sheet.headers.map(_s((h, i)=>{
+                            _s();
+                            const numbers = sheet.rows.map((r)=>(0, _utils.toNumber)(r[i])).filter((x)=>!isNaN(x));
+                            if (numbers.length < 2) return null;
+                            const { bins: edges, counts, min, max } = (0, _analysis.histogram)(numbers, bins);
+                            const maxCount = Math.max(1, ...counts);
+                            const p25 = (0, _utils.percentile)(numbers, 0.25);
+                            const med = (0, _utils.percentile)(numbers, 0.5);
+                            const p75 = (0, _utils.percentile)(numbers, 0.75);
+                            const mu = (0, _utils.mean)(numbers);
+                            const sd = (0, _utils.std)(numbers);
+                            const iqr = (0, _analysis.iqrFence)(numbers);
+                            const outIQR = numbers.filter((v)=>v < iqr.low || v > iqr.high).length;
+                            const [openDtl, setOpenDtl] = (0, _reactDefault.default).useState(false);
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "vstack",
+                                style: {
+                                    padding: "8px 6px",
+                                    border: "1px solid var(--border)",
+                                    borderRadius: "12px",
+                                    background: "#121622"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "small",
+                                        style: {
+                                            fontWeight: 700
+                                        },
+                                        children: [
+                                            h,
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "small",
+                                                style: {
+                                                    opacity: .7
+                                                },
+                                                children: [
+                                                    "(n=",
+                                                    numbers.length,
+                                                    ")"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 93,
+                                                columnNumber: 88
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 93,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HistogramSVG, {
+                                        edges: edges,
+                                        counts: counts,
+                                        maxCount: maxCount,
+                                        min: min,
+                                        max: max,
+                                        mean: mu,
+                                        median: med
+                                    }, void 0, false, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 95,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "hist-caption",
+                                        children: "mean (solid) \xb7 median (dashed)"
+                                    }, void 0, false, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 99,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "chips",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                label: "Mean",
+                                                value: (0, _utils.fmt)(mu),
+                                                help: "The average: add all values together and divide by how many there are."
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 103,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                label: "Std dev",
+                                                value: (0, _utils.fmt)(sd),
+                                                help: "How spread out the values are around the average. A larger number means more variability."
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 108,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                label: "Middle 50%",
+                                                value: (0, _utils.fmtRange)(p25, p75),
+                                                help: "Half of the values lie between these two numbers (25th to 75th percentile)."
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 113,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                label: "Unusual values",
+                                                value: String(outIQR),
+                                                help: "Values that are unusually low or high compared to most others, based on how wide the middle of the data is.",
+                                                tone: outIQR > Math.max(1, numbers.length * 0.1) ? "bad" : outIQR > 0 ? "warn" : "default"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 118,
+                                                columnNumber: 37
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 102,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                className: "details-btn",
+                                                onClick: ()=>setOpenDtl((v)=>!v),
+                                                children: openDtl ? "Hide details" : "More details"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 128,
+                                                columnNumber: 37
+                                            }, this),
+                                            openDtl && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "chips",
+                                                style: {
+                                                    marginTop: 6
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                        label: "Min\u2013Max",
+                                                        value: (0, _utils.fmtRange)(min, max),
+                                                        help: "The smallest and largest observed values."
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Distributions.tsx",
+                                                        lineNumber: 133,
+                                                        columnNumber: 45
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                        label: "Median",
+                                                        value: (0, _utils.fmt)(med),
+                                                        help: "The middle value when all numbers are sorted from smallest to largest."
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Distributions.tsx",
+                                                        lineNumber: 138,
+                                                        columnNumber: 45
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoChipDefault.default), {
+                                                        label: "Bins",
+                                                        value: String(counts.length),
+                                                        help: "How many bars are used to draw the histogram chart."
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Distributions.tsx",
+                                                        lineNumber: 143,
+                                                        columnNumber: 45
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 132,
+                                                columnNumber: 41
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 127,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, h, true, {
+                                fileName: "src/components/views/Distributions.tsx",
+                                lineNumber: 92,
+                                columnNumber: 29
+                            }, this);
+                        }, "CCY2GOMSUuwgC3xkcCyWjMsukPM="))
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 74,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 72,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "section vstack",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "title",
+                        children: "Categorical columns (top values)"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 159,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "grid cols-2",
+                        children: sheet.headers.map((h, i)=>{
+                            const col = sheet.rows.map((r)=>r[i]);
+                            const numsShare = col.map((0, _utils.toNumber)).filter((x)=>!isNaN(x)).length / (col.length || 1);
+                            if (numsShare > 0.5) return null; // mostly numeric → skip
+                            const expanded = !!expandedCats[h];
+                            const limit = expanded ? 1000 : 8;
+                            const top = (0, _analysis.topCategories)(col, limit);
+                            const showing = top.items.length;
+                            if (!showing) return null;
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "vstack",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "hstack",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "small",
+                                                children: [
+                                                    h,
+                                                    " (showing ",
+                                                    showing,
+                                                    " of ",
+                                                    top.uniqueCount,
+                                                    " unique",
+                                                    showing < top.uniqueCount ? " \u2014 limited" : "",
+                                                    ")"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 176,
+                                                columnNumber: 37
+                                            }, this),
+                                            top.uniqueCount > 8 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                className: "btn small",
+                                                onClick: ()=>setExpandedCats((m)=>({
+                                                            ...m,
+                                                            [h]: !m[h]
+                                                        })),
+                                                children: expanded ? "Collapse" : "Show all"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 180,
+                                                columnNumber: 41
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 175,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                                        className: "table",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            children: "Value"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/views/Distributions.tsx",
+                                                            lineNumber: 193,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            className: "num",
+                                                            children: "Count"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/views/Distributions.tsx",
+                                                            lineNumber: 194,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            className: "num",
+                                                            children: "%"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/views/Distributions.tsx",
+                                                            lineNumber: 195,
+                                                            columnNumber: 45
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/views/Distributions.tsx",
+                                                    lineNumber: 192,
+                                                    columnNumber: 41
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 191,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                                children: top.items.map((it)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                children: it.value
+                                                            }, void 0, false, {
+                                                                fileName: "src/components/views/Distributions.tsx",
+                                                                lineNumber: 201,
+                                                                columnNumber: 49
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                className: "num",
+                                                                children: it.count
+                                                            }, void 0, false, {
+                                                                fileName: "src/components/views/Distributions.tsx",
+                                                                lineNumber: 202,
+                                                                columnNumber: 49
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                className: "num",
+                                                                children: [
+                                                                    (100 * it.pct).toFixed(1),
+                                                                    "%"
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "src/components/views/Distributions.tsx",
+                                                                lineNumber: 203,
+                                                                columnNumber: 49
+                                                            }, this)
+                                                        ]
+                                                    }, it.value, true, {
+                                                        fileName: "src/components/views/Distributions.tsx",
+                                                        lineNumber: 200,
+                                                        columnNumber: 45
+                                                    }, this))
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Distributions.tsx",
+                                                lineNumber: 198,
+                                                columnNumber: 37
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/Distributions.tsx",
+                                        lineNumber: 190,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, h, true, {
+                                fileName: "src/components/views/Distributions.tsx",
+                                lineNumber: 174,
+                                columnNumber: 29
+                            }, this);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/views/Distributions.tsx",
+                        lineNumber: 160,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 158,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/views/Distributions.tsx",
+        lineNumber: 49,
+        columnNumber: 9
+    }, this);
+}
+_s1(SheetDistributions, "9z87ObpTF4gJeD8iiv7jxgHD4vM=");
+_c1 = SheetDistributions;
+/** Histogram SVG with mean/median overlays + bin tooltips */ function HistogramSVG({ edges, counts, maxCount, min, max, mean, median }) {
+    const width = 360, height = 120, pad = 6;
+    const barW = (width - pad * 2) / Math.max(1, counts.length);
+    const scaleX = (v)=>pad + (v - min) / Math.max(1e-12, max - min) * (width - pad * 2);
+    const MEAN_COLOR = "#f59e0b"; // amber
+    const MEDIAN_COLOR = "#22c55e"; // green
+    // helper to draw a labeled vertical line with a subtle halo
+    const VLine = ({ x, color, label, dy })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("line", {
+                    x1: x,
+                    x2: x,
+                    y1: pad,
+                    y2: height - pad,
+                    stroke: "black",
+                    strokeOpacity: "0.35",
+                    strokeWidth: 4
+                }, void 0, false, {
+                    fileName: "src/components/views/Distributions.tsx",
+                    lineNumber: 253,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("line", {
+                    x1: x,
+                    x2: x,
+                    y1: pad,
+                    y2: height - pad,
+                    stroke: color,
+                    strokeWidth: 2,
+                    strokeDasharray: label === "median" ? "4 3" : undefined
+                }, void 0, false, {
+                    fileName: "src/components/views/Distributions.tsx",
+                    lineNumber: 256,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                    transform: `translate(${x + 4}, ${dy})`,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
+                            x: -2,
+                            y: -9,
+                            rx: "4",
+                            ry: "4",
+                            width: 38,
+                            height: 14,
+                            fill: "rgba(0,0,0,.55)",
+                            stroke: color,
+                            strokeOpacity: "0.6"
+                        }, void 0, false, {
+                            fileName: "src/components/views/Distributions.tsx",
+                            lineNumber: 260,
+                            columnNumber: 17
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("text", {
+                            x: 2,
+                            y: 2,
+                            fontSize: "10",
+                            fill: color,
+                            children: label
+                        }, void 0, false, {
+                            fileName: "src/components/views/Distributions.tsx",
+                            lineNumber: 262,
+                            columnNumber: 17
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/views/Distributions.tsx",
+                    lineNumber: 259,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        width: width,
+        height: height,
+        role: "img",
+        "aria-label": "Histogram",
+        children: [
+            counts.map((c, i)=>{
+                const h = maxCount ? c / maxCount * (height - pad * 2) : 0;
+                const x = pad + i * barW;
+                const y = height - pad - h;
+                const e0 = edges[i];
+                const e1 = i === counts.length - 1 ? max : edges[i + 1];
+                const title = `${e0.toFixed(3)} \u{2013} ${e1.toFixed(3)} : ${c}`;
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {
+                            children: title
+                        }, void 0, false, {
+                            fileName: "src/components/views/Distributions.tsx",
+                            lineNumber: 279,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
+                            x: x,
+                            y: y,
+                            width: Math.max(1, barW - 1),
+                            height: h,
+                            fill: "currentColor",
+                            opacity: "0.78"
+                        }, void 0, false, {
+                            fileName: "src/components/views/Distributions.tsx",
+                            lineNumber: 280,
+                            columnNumber: 25
+                        }, this)
+                    ]
+                }, i, true, {
+                    fileName: "src/components/views/Distributions.tsx",
+                    lineNumber: 278,
+                    columnNumber: 21
+                }, this);
+            }),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(VLine, {
+                x: scaleX(mean),
+                color: MEAN_COLOR,
+                label: "mean",
+                dy: 12
+            }, void 0, false, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 293,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(VLine, {
+                x: scaleX(median),
+                color: MEDIAN_COLOR,
+                label: "median",
+                dy: 28
+            }, void 0, false, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 294,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
+                x: "0",
+                y: "0",
+                width: width,
+                height: height,
+                fill: "none",
+                stroke: "rgba(255,255,255,0.08)"
+            }, void 0, false, {
+                fileName: "src/components/views/Distributions.tsx",
+                lineNumber: 297,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/views/Distributions.tsx",
+        lineNumber: 268,
+        columnNumber: 9
+    }, this);
+}
+_c2 = HistogramSVG;
+var _c, _c1, _c2;
+$RefreshReg$(_c, "Distributions");
+$RefreshReg$(_c1, "SheetDistributions");
+$RefreshReg$(_c2, "HistogramSVG");
+
+  $parcel$ReactRefreshHelpers$2706.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../logic/analysis":"gMyHq","../../logic/utils":"191Vn","../Collapsible":"1GSqH","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../InfoChip":"daQpV"}],"daQpV":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ec2c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$ec2c.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ec2c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>InfoChip);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function InfoChip({ label, value, help, tone = "default" }) {
+    _s();
+    const [open, setOpen] = (0, _reactDefault.default).useState(false);
+    const ref = (0, _reactDefault.default).useRef(null);
+    // Close on outside click
+    (0, _reactDefault.default).useEffect(()=>{
+        if (!open) return;
+        const onDoc = (e)=>{
+            if (!ref.current?.contains(e.target)) setOpen(false);
+        };
+        document.addEventListener("click", onDoc);
+        return ()=>document.removeEventListener("click", onDoc);
+    }, [
+        open
+    ]);
+    // Pointer detection: hover for mouse, click for touch
+    const supportsHover = window.matchMedia?.("(hover: hover)").matches;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "chip-wrap",
+        ref: ref,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                type: "button",
+                className: `chip light ${tone}`,
+                "aria-haspopup": "dialog",
+                "aria-expanded": open,
+                onMouseEnter: ()=>supportsHover && setOpen(true),
+                onMouseLeave: ()=>supportsHover && setOpen(false),
+                onClick: ()=>!supportsHover && setOpen((o)=>!o),
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "k",
+                        children: label
+                    }, void 0, false, {
+                        fileName: "src/components/InfoChip.tsx",
+                        lineNumber: 41,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "v",
+                        children: value
+                    }, void 0, false, {
+                        fileName: "src/components/InfoChip.tsx",
+                        lineNumber: 42,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/InfoChip.tsx",
+                lineNumber: 32,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `tip ${open ? "open" : ""}`,
+                role: "dialog",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "tip-body",
+                        children: help
+                    }, void 0, false, {
+                        fileName: "src/components/InfoChip.tsx",
+                        lineNumber: 46,
+                        columnNumber: 17
+                    }, this),
+                    !supportsHover && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "tip-close",
+                        onClick: ()=>setOpen(false),
+                        "aria-label": "Close",
+                        children: "\xd7"
+                    }, void 0, false, {
+                        fileName: "src/components/InfoChip.tsx",
+                        lineNumber: 48,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/InfoChip.tsx",
+                lineNumber: 45,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/InfoChip.tsx",
+        lineNumber: 31,
+        columnNumber: 9
+    }, this);
+}
+_s(InfoChip, "wl9VvfhnMVWQ+kCekFjcRPEi3/0=");
+_c = InfoChip;
+var _c;
+$RefreshReg$(_c, "InfoChip");
+
+  $parcel$ReactRefreshHelpers$ec2c.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3QFAQ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$cd9b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$cd9b.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cd9b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Outliers);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _analysis = require("../../logic/analysis");
+var _collapsible = require("../Collapsible");
+var _collapsibleDefault = parcelHelpers.interopDefault(_collapsible);
+var _utils = require("../../logic/utils");
+var _s = $RefreshSig$();
+function Outliers({ file }) {
+    _s();
+    const [openMap, setOpenMap] = (0, _reactDefault.default).useState(()=>Object.fromEntries(file.sheetOrder.map((s, i)=>[
+                s,
+                i === 0
+            ])));
+    const setAll = (v)=>setOpenMap(Object.fromEntries(file.sheetOrder.map((s)=>[
+                s,
+                v
+            ])));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "vstack",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "view-controls",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(true),
+                        children: "Expand all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Outliers.tsx",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn small",
+                        onClick: ()=>setAll(false),
+                        children: "Collapse all"
+                    }, void 0, false, {
+                        fileName: "src/components/views/Outliers.tsx",
+                        lineNumber: 17,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/views/Outliers.tsx",
+                lineNumber: 15,
+                columnNumber: 13
+            }, this),
+            file.sheetOrder.map((sName)=>{
+                const s = file.sheets[sName];
+                const prof = (0, _analysis.profileColumns)(s.headers, s.rows);
+                const out = (0, _analysis.detectOutliersByColumn)(s.headers, s.rows);
+                // Build sample rows for columns that have outliers (IQR) — up to 10 rows per sheet
+                const samples = [];
+                for(let i = 0; i < s.headers.length; i++){
+                    const info = out[i];
+                    if (!info.numeric || !Number.isFinite(info.low) || !Number.isFinite(info.high)) continue;
+                    for(let r = 0; r < s.rows.length && samples.length < 10; r++){
+                        const v = (0, _utils.toNumber)(s.rows[r]?.[i]);
+                        if (!isNaN(v) && (v < info.low || v > info.high)) samples.push({
+                            col: s.headers[i],
+                            rowIndex: r,
+                            value: v
+                        });
+                    }
+                }
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collapsibleDefault.default), {
+                    title: `Outliers \u{2014} ${s.name}`,
+                    open: !!openMap[sName],
+                    onToggle: ()=>setOpenMap((m)=>({
+                                ...m,
+                                [sName]: !m[sName]
+                            })),
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                            className: "table",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                children: "Column"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 48,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                children: "Type"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 49,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "IQR outliers"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 50,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "Z>3 outliers"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 51,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "IQR low"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 52,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                className: "num",
+                                                children: "IQR high"
+                                            }, void 0, false, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 53,
+                                                columnNumber: 37
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/views/Outliers.tsx",
+                                        lineNumber: 47,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/views/Outliers.tsx",
+                                    lineNumber: 46,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                    children: out.map((o, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    children: o.name
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 59,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "badge",
+                                                        children: prof[idx].kind
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Outliers.tsx",
+                                                        lineNumber: 60,
+                                                        columnNumber: 45
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 60,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: o.numeric ? o.countIQR : "\u2014"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 61,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: o.numeric ? o.countZ : "\u2014"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 62,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: Number.isFinite(o.low) ? o.low.toFixed(3) : "\u2014"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 63,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                    className: "num",
+                                                    children: Number.isFinite(o.high) ? o.high.toFixed(3) : "\u2014"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 64,
+                                                    columnNumber: 41
+                                                }, this)
+                                            ]
+                                        }, o.name, true, {
+                                            fileName: "src/components/views/Outliers.tsx",
+                                            lineNumber: 58,
+                                            columnNumber: 37
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "src/components/views/Outliers.tsx",
+                                    lineNumber: 56,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/Outliers.tsx",
+                            lineNumber: 45,
+                            columnNumber: 25
+                        }, this),
+                        samples.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "section vstack",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "title",
+                                    children: "Example outlier rows (IQR)"
+                                }, void 0, false, {
+                                    fileName: "src/components/views/Outliers.tsx",
+                                    lineNumber: 72,
+                                    columnNumber: 33
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                                    className: "table",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                        children: "Row"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Outliers.tsx",
+                                                        lineNumber: 75,
+                                                        columnNumber: 45
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                        children: "Column"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Outliers.tsx",
+                                                        lineNumber: 75,
+                                                        columnNumber: 57
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                        className: "num",
+                                                        children: "Value"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/views/Outliers.tsx",
+                                                        lineNumber: 75,
+                                                        columnNumber: 72
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/views/Outliers.tsx",
+                                                lineNumber: 75,
+                                                columnNumber: 41
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "src/components/views/Outliers.tsx",
+                                            lineNumber: 74,
+                                            columnNumber: 37
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                            children: samples.map((smp, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                            children: [
+                                                                "#",
+                                                                smp.rowIndex + 2 /* +1 for header, +1 for 1-based */ 
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/components/views/Outliers.tsx",
+                                                            lineNumber: 80,
+                                                            columnNumber: 49
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                            children: smp.col
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/views/Outliers.tsx",
+                                                            lineNumber: 81,
+                                                            columnNumber: 49
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                            className: "num",
+                                                            children: smp.value.toFixed(3)
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/views/Outliers.tsx",
+                                                            lineNumber: 82,
+                                                            columnNumber: 49
+                                                        }, this)
+                                                    ]
+                                                }, i, true, {
+                                                    fileName: "src/components/views/Outliers.tsx",
+                                                    lineNumber: 79,
+                                                    columnNumber: 45
+                                                }, this))
+                                        }, void 0, false, {
+                                            fileName: "src/components/views/Outliers.tsx",
+                                            lineNumber: 77,
+                                            columnNumber: 37
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/views/Outliers.tsx",
+                                    lineNumber: 73,
+                                    columnNumber: 33
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "small",
+                                    children: "Showing up to 10 samples per sheet."
+                                }, void 0, false, {
+                                    fileName: "src/components/views/Outliers.tsx",
+                                    lineNumber: 87,
+                                    columnNumber: 33
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/views/Outliers.tsx",
+                            lineNumber: 71,
+                            columnNumber: 29
+                        }, this)
+                    ]
+                }, sName, true, {
+                    fileName: "src/components/views/Outliers.tsx",
+                    lineNumber: 39,
+                    columnNumber: 21
+                }, this);
+            })
+        ]
+    }, void 0, true, {
+        fileName: "src/components/views/Outliers.tsx",
+        lineNumber: 14,
+        columnNumber: 9
+    }, this);
+}
+_s(Outliers, "74ASnJWAX7VqcKMY1LoeJUhMLH0=");
+_c = Outliers;
+var _c;
+$RefreshReg$(_c, "Outliers");
+
+  $parcel$ReactRefreshHelpers$cd9b.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../logic/analysis":"gMyHq","../Collapsible":"1GSqH","../../logic/utils":"191Vn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bhJkM":[function() {},{}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire47ed", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=public.6efbc4f8.js.map
